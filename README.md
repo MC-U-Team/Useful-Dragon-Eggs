@@ -1,4 +1,4 @@
-# useful-dragon-eggs
+# Useful-Dragon-Eggs
 
 [
 ![Curseforge Downloads](http://cf.way2muchnoise.eu/useful-dragon-eggs.svg)
