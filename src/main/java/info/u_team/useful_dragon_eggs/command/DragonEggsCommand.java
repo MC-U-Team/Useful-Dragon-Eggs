@@ -5,6 +5,7 @@ import com.mojang.brigadier.arguments.BoolArgumentType;
 
 import info.u_team.useful_dragon_eggs.config.ServerConfig;
 import net.minecraft.command.*;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 
 public class DragonEggsCommand {
@@ -21,7 +22,7 @@ public class DragonEggsCommand {
 	
 	private static int bedrockBreakingGet(CommandSource source) {
 		final BooleanValue bedrockBreaking = ServerConfig.getInstance().bedrockBreaking;
-		bedrockBreaking.get();
+		source.sendFeedback(ITextComponent.func_244388_a("Value bedrock-breaking is currently set to: " + bedrockBreaking.get()), false);
 		return 0;
 	}
 	
@@ -29,6 +30,7 @@ public class DragonEggsCommand {
 		final BooleanValue bedrockBreaking = ServerConfig.getInstance().bedrockBreaking;
 		bedrockBreaking.set(value);
 		bedrockBreaking.save();
+		source.sendFeedback(ITextComponent.func_244388_a("Value bedrock-breaking is now set to: " + bedrockBreaking.get()), true);
 		return 0;
 	}
 	
