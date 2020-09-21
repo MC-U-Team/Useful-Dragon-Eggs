@@ -13,9 +13,16 @@ public class DragonEggsCommand {
 		dispatcher.register(Commands.literal("dragoneggs") //
 				.then(Commands.literal("bedrock-breaking") //
 						.requires(source -> source.hasPermissionLevel(2)) //
+						.executes(context -> bedrockBreakingGet(context.getSource())) //
 						.then(Commands.argument("value", BoolArgumentType.bool())).executes(context -> {
 							return bedrockBreakingSet(context.getSource(), BoolArgumentType.getBool(context, "value"));
 						})));
+	}
+	
+	private static int bedrockBreakingGet(CommandSource source) {
+		final BooleanValue bedrockBreaking = ServerConfig.getInstance().bedrockBreaking;
+		bedrockBreaking.get();
+		return 0;
 	}
 	
 	private static int bedrockBreakingSet(CommandSource source, boolean value) {
