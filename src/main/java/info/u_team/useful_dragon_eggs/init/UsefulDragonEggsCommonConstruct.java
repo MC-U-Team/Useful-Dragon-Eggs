@@ -10,6 +10,7 @@ public class UsefulDragonEggsCommonConstruct implements IModConstruct {
 	
 	@Override
 	public void construct() {
+		BusRegister.registerForge(UsefulDragonEggsCommands::registerForge);
 		BusRegister.registerForge(UsefulDragonEggsFallHandler::registerForge);
 	}
 }
