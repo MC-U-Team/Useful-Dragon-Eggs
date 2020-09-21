@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="[34,)"
+issueTrackerURL="https://github.com/MC-U-Team/Useful-Dragon-Eggs/issues"
+displayURL="https://u-team.info/mods/usefuldragoneggs"
+logoFile="logo.png"
+license="Apache-2.0 License"
+credits="Team U-Team"
+authors="HyCraftHD"
+
+[[mods]]
+	modId="usefuldragoneggs"
+	version="${file.jarVersion}"
+	displayName="Useful Dragon Eggs"
+	updateJSONURL="https://api.u-team.info/update/usefuldragoneggs.json"
+	description="This mod adds a command to give dragon eggs a use. The command can revert MC-94186 / MC-122524 to give the dragon egg the possibility to break bedrock again."
+	
+	[[dependencies.usefuldragoneggs]]
+	    modId="forge"
+	    mandatory=true
+	    versionRange="[34.0.1,)"
+	    ordering="NONE"
+	    side="BOTH"
+	
+	[[dependencies.usefuldragoneggs]]
+	    modId="minecraft"
+	    mandatory=true
+	    versionRange="[1.16.3]"
+	    ordering="NONE"
+	    side="BOTH"
+	    
+	[[dependencies.usefuldragoneggs]]
+	    modId="uteamcore"
+	    mandatory=true
+	    versionRange="[3.1.9.181,)"
+	    ordering="NONE"
+	    side="BOTH"
