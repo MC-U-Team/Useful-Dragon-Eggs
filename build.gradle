@@ -144,8 +144,6 @@ curseforge {
 		
 		relations {
       		requiredDependency "u-team-core"
-      		optionalDependency "jei"
-      		optionalDependency "curios"
     	}
 
     	mainArtifact(jar) {
