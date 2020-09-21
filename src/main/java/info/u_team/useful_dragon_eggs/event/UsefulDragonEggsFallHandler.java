@@ -1,5 +1,6 @@
 package info.u_team.useful_dragon_eggs.event;
 
+import info.u_team.useful_dragon_eggs.config.ServerConfig;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.FallingBlockEntity;
@@ -20,6 +21,10 @@ public class UsefulDragonEggsFallHandler {
 		final Entity entity = event.getEntity();
 		
 		if (!(entity instanceof FallingBlockEntity)) {
+			return;
+		}
+		
+		if (!ServerConfig.getInstance().bedrockBreaking.get()) {
 			return;
 		}
 		
