@@ -6,7 +6,7 @@ import net.minecraft.entity.item.FallingBlockEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.*;
 
 public class UsefulDragonEggsFallHandler {
 	
@@ -54,7 +54,7 @@ public class UsefulDragonEggsFallHandler {
 	}
 	
 	public static void registerForge(IEventBus bus) {
-		bus.addListener(UsefulDragonEggsFallHandler::onEntityJoinWorld);
+		bus.addListener(EventPriority.HIGHEST, UsefulDragonEggsFallHandler::onEntityJoinWorld);
 	}
 	
 }
