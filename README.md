@@ -8,7 +8,7 @@
 ![Discord](https://img.shields.io/discord/297104769649213441?label=Discord)
 ](https://discordapp.com/invite/QXbWS36)
 
-### This mod adds three new backpacks to the game which enhance your gaming experience.
+### This mod adds a command to give dragon eggs the use of bedrock breaking again.
 
 - Download on [curseforge](https://www.curseforge.com/minecraft/mc-mods/useful-dragon-eggs).  
 - Find more information on our [website](https://u-team.info/mods/usefuldragoneggs).
