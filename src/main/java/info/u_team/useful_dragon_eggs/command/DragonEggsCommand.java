@@ -26,7 +26,7 @@ public class DragonEggsCommand {
 	private static int bedrockBreakingGet(CommandSource source) {
 		System.out.println("GET");
 		final BooleanValue bedrockBreaking = ServerConfig.getInstance().bedrockBreaking;
-		source.sendFeedback(ITextComponent.func_244388_a("Value bedrock-breaking is currently set to: " + bedrockBreaking.get()), false);
+		source.sendFeedback(ITextComponent.getTextComponentOrEmpty("Value bedrock-breaking is currently set to: " + bedrockBreaking.get()), false);
 		return 0;
 	}
 	
@@ -34,7 +34,7 @@ public class DragonEggsCommand {
 		final BooleanValue bedrockBreaking = ServerConfig.getInstance().bedrockBreaking;
 		bedrockBreaking.set(value);
 		bedrockBreaking.save();
-		source.sendFeedback(ITextComponent.func_244388_a("Value bedrock-breaking is now set to: " + bedrockBreaking.get()), true);
+		source.sendFeedback(ITextComponent.getTextComponentOrEmpty("Value bedrock-breaking is now set to: " + bedrockBreaking.get()), true);
 		return 0;
 	}
 	
