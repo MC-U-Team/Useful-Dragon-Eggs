@@ -24,7 +24,6 @@ public class DragonEggsCommand {
 	}
 	
 	private static int bedrockBreakingGet(CommandSource source) {
-		System.out.println("GET");
 		final BooleanValue bedrockBreaking = ServerConfig.getInstance().bedrockBreaking;
 		source.sendFeedback(ITextComponent.getTextComponentOrEmpty("Value bedrock-breaking is currently set to: " + bedrockBreaking.get()), false);
 		return 0;
