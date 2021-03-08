@@ -6,7 +6,7 @@ buildscript {
 		maven {
 			url = "https://repo.u-team.info"
 		}
-		jcenter()
+		mavenCentral()
 	}
 	dependencies {
 		classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "4.0.11", changing: true
@@ -152,7 +152,7 @@ curseforge {
 		addGameVersion "Java 8"
 		addGameVersion "Java 9"
 		addGameVersion "Java 10"
-				
+		
 		relations {
 			requiredDependency "u-team-core"
 		}
