@@ -1,10 +1,6 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.16.4-1.0.1.5] - 2021-01-22
+## [1.16.5-1.0.1.6] - 2021-03-09
 ### Changed
-- Updated to final 1.16.4 forge 35.1.37
-
-## [1.16.4-1.0.1.4] - 2020-11-10
-### Changed
- - Port to 1.16.4
+ - Updated to 1.16.5
