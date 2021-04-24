@@ -4,7 +4,8 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 
 import info.u_team.useful_dragon_eggs.config.ServerConfig;
-import net.minecraft.command.*;
+import net.minecraft.command.CommandSource;
+import net.minecraft.command.Commands;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 
