@@ -4,17 +4,17 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 
 import info.u_team.useful_dragon_eggs.config.ServerConfig;
-import net.minecraft.command.CommandSource;
-import net.minecraft.command.Commands;
-import net.minecraft.util.text.ITextComponent;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.network.chat.Component;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 
 public class DragonEggsCommand {
 	
-	public static void register(CommandDispatcher<CommandSource> dispatcher) {
+	public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
 		dispatcher.register(Commands.literal("dragoneggs") //
 				.then(Commands.literal("bedrock-breaking") //
-						.requires(source -> source.hasPermissionLevel(2)) //
+						.requires(source -> source.hasPermission(2)) //
 						.executes(context -> {
 							return bedrockBreakingGet(context.getSource());
 						}) //
@@ -24,16 +24,16 @@ public class DragonEggsCommand {
 								}))));
 	}
 	
-	private static int bedrockBreakingGet(CommandSource source) {
+	private static int bedrockBreakingGet(CommandSourceStack source) {
 		final BooleanValue bedrockBreaking = ServerConfig.getInstance().bedrockBreaking;
-		source.sendFeedback(ITextComponent.getTextComponentOrEmpty("Value bedrock-breaking is currently set to: " + bedrockBreaking.get()), false);
+		source.sendSuccess(() -> Component.literal("Value bedrock-breaking is currently set to: " + bedrockBreaking.get()), false);
 		return 0;
 	}
 	
-	private static int bedrockBreakingSet(CommandSource source, boolean value) {
+	private static int bedrockBreakingSet(CommandSourceStack source, boolean value) {
 		final BooleanValue bedrockBreaking = ServerConfig.getInstance().bedrockBreaking;
 		bedrockBreaking.set(value);
-		source.sendFeedback(ITextComponent.getTextComponentOrEmpty("Value bedrock-breaking is now set to: " + bedrockBreaking.get()), true);
+		source.sendSuccess(() -> Component.literal("Value bedrock-breaking is now set to: " + bedrockBreaking.get()), true);
 		return 0;
 	}
 	
