@@ -13,6 +13,5 @@ public class UsefulDragonEggsForgeCommonConstruct implements ModConstruct {
 	@Override
 	public void construct() {
 		ModLoadingContext.get().registerExtensionPoint(DisplayTest.class, () -> new DisplayTest(() -> NetworkConstants.IGNORESERVERONLY, (remoteVersion, network) -> true));
-		// BusRegister.registerForge(UsefulDragonEggsCommands::registerForge);
 	}
 }
