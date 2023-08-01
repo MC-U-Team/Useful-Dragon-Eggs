@@ -21,7 +21,7 @@
 		]
 	},
 	"mixins": [
-		"usefuldragoneggs.mixins.refmap.json"
+		"usefuldragoneggs.mixins.json"
 	],
 	"depends": {
 		"uteamcore": ">=5.1.3.267",

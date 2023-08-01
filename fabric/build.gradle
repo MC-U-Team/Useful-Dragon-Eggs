@@ -35,7 +35,7 @@ loom {
 	}
 	
 	mixin {
-		defaultRefmapName = "attackspeedenchantment.mixins.refmap.json"
+		defaultRefmapName = "usefuldragoneggs.mixins.refmap.json"
 	}
 }
 
