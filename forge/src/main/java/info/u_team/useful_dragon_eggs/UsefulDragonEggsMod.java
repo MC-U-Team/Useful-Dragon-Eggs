@@ -14,7 +14,5 @@ public class UsefulDragonEggsMod {
 		JarSignVerifier.checkSigned(MODID);
 		
 		AnnotationManager.callAnnotations(MODID);
-		
-		System.out.println(EndDragonFight.class);
 	}
 }
