@@ -20,6 +20,8 @@ java {
 }
 
 loom {
+	accessWidenerPath = file("src/main/resources/usefuldragoneggs.accesswidener")
+	
 	runs {
 		client {
 			runDir "run/client"
