@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "usefuldragoneggs",
+	"version": "${version}",
+	"name": "Useful Dragon Eggs",
+	"description": "Join our discord server here: https://discord.hycrafthd.net\n\nThis mod adds a command to give dragon eggs a use. The command can revert MC-94186 / MC-122524 to give the dragon egg the possibility to break bedrock again.",
+	"authors": [
+		"HyCraftHD"
+	],
+	"contact": {
+		"homepage": "https://u-team.info/mods/usefuldragoneggs",
+		"sources": "https://github.com/MC-U-Team/Useful-Dragon-Eggs",
+		"issues": "https://github.com/MC-U-Team/Useful-Dragon-Eggs/issues"
+	},
+	"license": "Apache-2.0 License",
+	"icon": "logo.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"info.u_team.useful_dragon_eggs.UsefulDragonEggsMod"
+		]
+	},
+	"mixins": [
+		"usefuldragoneggs.mixins.refmap.json"
+	],
+	"depends": {
+		"uteamcore": ">=5.1.3.267",
+		"fabricloader": ">=0.14.21",
+		"fabric": ">=0.84.0+1.20.1",
+		"minecraft": "1.20.1",
+		"java": ">=17"
+	},
+	"custom": {
+		"uteamcore:update_url": "https://api.u-team.info/update/usefuldragoneggs_fabric.json",
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.hycrafthd.net"
+			}
+		}
+	}
+}

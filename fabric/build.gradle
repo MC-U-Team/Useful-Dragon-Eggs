@@ -33,6 +33,10 @@ loom {
 			ideConfigGenerated true
 		}
 	}
+	
+	mixin {
+		defaultRefmapName = "attackspeedenchantment.mixins.refmap.json"
+	}
 }
 
 tasks.withType(Jar).configureEach { task ->

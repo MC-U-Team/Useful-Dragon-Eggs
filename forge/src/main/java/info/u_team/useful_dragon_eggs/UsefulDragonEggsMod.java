@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 @Mod(UsefulDragonEggsMod.MODID)
 public class UsefulDragonEggsMod {
 	
-	public static final String MODID = "usefuldragoneggs";
+	public static final String MODID = UsefulDragonEggsReference.MODID;
 	
 	public UsefulDragonEggsMod() {
 		JarSignVerifier.checkSigned(MODID);
