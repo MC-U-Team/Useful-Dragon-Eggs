@@ -6,7 +6,8 @@
 	"package": "info.u_team.useful_dragon_eggs.mixin",
 	"mixins": [],
 	"client": [
-		"FallingBlockMixin"
+		"FallingBlockMixin",
+		"EndDragonFightMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
